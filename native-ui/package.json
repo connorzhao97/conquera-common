@@ -1,0 +1,60 @@
+{
+  "name": "@conquera/native-ui",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "tsup": "tsup src/index.ts --format esm,cjs --no-minify --out-dir lib --clean --dts",
+    "build": "rimraf ./lib/ node_modules/.cache && microbundle -f modern,cjs --no-compress --jsxImportSource nativewind",
+    "watch": "rimraf ./lib/ node_modules/.cache && microbundle -f modern,cjs --no-compress --jsxImportSource nativewind",
+    "rollup": "rimraf ./lib/ node_modules/.cache && rollup --config"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "main": "lib/index.cjs",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    "types": "./lib/index.d.ts",
+    "require": "./lib/index.cjs",
+    "default": "./lib/index.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@rollup/plugin-babel": "~6.0.4",
+    "@rollup/plugin-commonjs": "~28.0.6",
+    "@rollup/plugin-node-resolve": "~16.0.1",
+    "@rollup/plugin-typescript": "~12.1.4",
+    "@types/react": "~19.0.10",
+    "microbundle": "^0.15.1",
+    "nativewind": "~4.1.23",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "react": "19.0.0",
+    "react-native": "0.79.5",
+    "react-native-css-interop": "~0.1.22",
+    "react-native-gesture-handler": "~2.24.0",
+    "react-native-reanimated": "~3.17.4",
+    "react-native-safe-area-context": "5.4.0",
+    "react-native-web": "~0.20.0",
+    "rimraf": "^3.0.2",
+    "rollup": "~4.46.2",
+    "rollup-plugin-peer-deps-external": "~2.2.4",
+    "tailwindcss": "^3.4.17",
+    "tsup": "^8.5.0",
+    "typescript": "~5.8.3"
+  },
+  "peerDependencies": {
+    "@types/react": "~19.0.10",
+    "nativewind": "~4.1.23",
+    "prettier": "^3.6.2",
+    "react": "19.0.0",
+    "react-native": "0.79.5",
+    "react-native-css-interop": "~0.1.22",
+    "react-native-gesture-handler": "~2.24.0",
+    "react-native-reanimated": "~3.17.4",
+    "react-native-safe-area-context": "5.4.0",
+    "react-native-web": "~0.20.0"
+  }
+}
